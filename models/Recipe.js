@@ -6,10 +6,10 @@ const recipeSchema = new mongoose.Schema({
       required: true
     },
     ingredients: {
-      type: String
+      type: Array
     },
     steps: {
-        type: String
+        type: Array
       },
     image: {
       type: String,
