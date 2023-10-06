@@ -24,6 +24,7 @@ async function getRecipeById(req, res) {
 async function createRecipe(req, res) {
     try {
         if (!req.body.image) req.body.image = undefined
+        console.log("request here", req.body)
         await new Recipe(req.body).save()
         res.status(201).json({ 'message': 'recipe created' })
     } catch (error) {
